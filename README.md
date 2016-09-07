@@ -6,3 +6,4 @@ All app in the demonstation provide same view and functionality including:
 * Riot.js http://riotjs.com/
 * React.js https://facebook.github.io/react/
 
+If anyone finds any improvement on code readability or performance improvement, please feel free to pull-request :)
