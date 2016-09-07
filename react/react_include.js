@@ -134,7 +134,7 @@ var ListApp = React.createClass({
         <Header></Header>
         <Sidebar></Sidebar>
         <div className='content'>
-          <h2>Manage Source</h2>
+          <br/>
           <ServerTable
             timesource={this.state.items}
             onTypeChange={this.toggleType}

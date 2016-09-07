@@ -58,11 +58,11 @@ th {
 table.dataTable {
   border-style : solid;
   border-color : #EEEEEE;
-  border-width : 0px;
+  border-width : 2px;
   padding: 2px;
   border-spacing: 0px;
   border-collapse: collapse;
-  
+  width: 50%;
 }
 
 td.dataTable {
@@ -73,14 +73,6 @@ td.dataTable {
 
 hr {
   background :#274247;
-}
-
-fieldset {
-  background : #EEEEEE;
-  border: 1px solid #555555;
-  margin: 0px;
-  padding: 5px; 
-  
 }
 
 tr.selected {

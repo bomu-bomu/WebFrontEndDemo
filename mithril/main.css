@@ -57,11 +57,11 @@ th {
 table.dataTable {
   border-style : solid;
   border-color : #EEEEEE;
-  border-width : 0px;
+  border-width : 2px;
   padding: 2px;
   border-spacing: 0px;
   border-collapse: collapse;
-  
+  width: 50%; 
 }
 
 td.dataTable {
@@ -74,17 +74,9 @@ hr {
   background :#274247;
 }
 
-fieldset {
-  background : #EEEEEE;
-  border: 2px dotted #555555;
-  padding: 5px; 
-  width: 30%;
-}
-
 tr.selected {
   background: #EEEE00;
 }
-
 
 div.modal_screen {
   z-index:1;

@@ -11,7 +11,7 @@ var Demo = {
 var DemoServerApp = {
   view: function (ctrl, args) {
     return m('div', [
-      m('h2', 'Manage Source'),
+      m('br'),
       m(ServerTable),
       m('hr'),
       m(AddPanel),
