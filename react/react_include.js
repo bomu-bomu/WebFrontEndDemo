@@ -209,28 +209,21 @@ var SourceEntry = React.createClass({
 })
 
 var ControlButton = React.createClass({
-  onDelete: function () {
-    this.props.onDelete()
-  },
-  onModify: function () {
-    this.props.onModify()
-  },
   render: function () {
     return (
       <div>
-        <input type='button' value='Delete' onClick={this.onDelete}/>
-        <input type='button' value='Modify' onClick={this.onModify}/>
+        <input type='button' value='Delete' onClick={this.props.onDelete}/>
+        <input type='button' value='Modify' onClick={this.props.onModify}/>
       </div>
     )
   }
 })
 
 var AddPanel = React.createClass({
-
   getInitialState: function () {
     return {
       address: '',
-      type: 'server',
+      type: 'a1',
       prefer: false,
       burst: false
     }
@@ -339,10 +332,7 @@ var Notification = React.createClass({
     })
   },
   openNoti: function (level, text) {
-    this.setState({
-      level: level,
-      text: text
-    })
+    this.setState({level, text})
   },
 
   timeout: null,
@@ -363,16 +353,11 @@ var Notification = React.createClass({
   },
 
   render: function () {
-    var klass = 'notification '
     if (!this.state.text) {
       return null
     }
 
-    if (this.state.level === 'info') {
-      klass = klass + 'info'
-    } else if (this.state.level === 'error') {
-      klass = klass + 'error'
-    }
+    var klass = "notification " + this.state.level
     return (
       <div id='noti' className={klass} onClick={this.closeNoti} ref='noti'>
         {this.state.text}
@@ -394,17 +379,13 @@ var TestApp = React.createClass({
 })
 
 var hashHistory = ReactRouter.hashHistory
-var App = React.createClass({
-  render: function () {
-    return (
-      <ReactRouter.Router history={hashHistory}>
-        <ReactRouter.Route path='/' component={ListApp} />
-        <ReactRouter.Route path='/server' component={ListApp} />
-        <ReactRouter.Route path='/test' component={TestApp} />
-      </ReactRouter.Router>
-    )
-  }
-})
+var App = () => (
+  <ReactRouter.Router history={hashHistory}>
+    <ReactRouter.Route path='/' component={ListApp} />
+    <ReactRouter.Route path='/server' component={ListApp} />
+    <ReactRouter.Route path='/test' component={TestApp} />
+  </ReactRouter.Router>
+)
 
 ReactDOM.render(
   <App></App>,

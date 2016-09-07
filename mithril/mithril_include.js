@@ -1,5 +1,5 @@
-var Demo = {
-  view: function (ctrl, args) {
+let Demo = {
+  view(ctrl, args) {
     return [
       Header,
       Menu,
@@ -12,9 +12,9 @@ var DemoServerApp = {
   view: function (ctrl, args) {
     return m('div', [
       m('br'),
-      m(ServerTable),
+      ServerTable,
       m('hr'),
-      m(AddPanel),
+      AddPanel,
       DemoServerApp.modal ? m(ModalScreen) : null,
       Notification.text ? Notification : null
     ])

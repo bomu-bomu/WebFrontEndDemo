@@ -1,7 +1,6 @@
 <demoapp>
   <br/>
-  <ServerTable>
-  </ServerTable>
+  <ServerTable></ServerTable>
   <hr/>
   <AddPanel></AddPanel>
   <ModalScreen if={modal}></ModalScreen>
