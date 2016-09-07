@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Riot todo</title>
+    <script src="js/riot+compiler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Tags added here -->
+    <header></header>
+    <sidebar></sidebar> 
+    <div id="main"></div>
+    <!--
+    <routehandler></routehandler>
+    -->
+
+    <script src="tags/header.tag" type="riot/tag"></script>
+    <script src="tags/sidebar.tag" type="riot/tag"></script>
+    <script src="tags/demo_app.tag" type="riot/tag"></script>
+    <script src="tags/server_table.tag" type="riot/tag"></script>
+    <script src="tags/add_panel.tag" type="riot/tag"></script>
+    <script src="tags/control_button.tag" type="riot/tag"></script>
+    <script src="tags/modal_screen.tag" type="riot/tag"></script>
+    <script src="tags/modal_dialog.tag" type="riot/tag"></script>
+    <script src="tags/gps_app.tag" type="riot/tag"></script>
+    <script src="tags/Notification.tag" type="riot/tag"></script>
+  
+
+    <!-- Mount tags with riot.mount() -->
+    <script>
+    riot.mount('*', { })
+    riot.route(function(id) {
+      if (id == 'test') {
+        // When using riot.mount with html tag
+        // Use lowercase tag name
+        // due to HTML standard
+        riot.mount('#main','gpsapp')
+      } else {
+        riot.mount('#main', 'demoapp')
+      }
+    })
+    riot.route.start(true)
+
+    </script>
+
+    <style type="riot"></style>
+  </body>
+</html>

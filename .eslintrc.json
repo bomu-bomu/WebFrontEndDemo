@@ -1,0 +1,21 @@
+{
+    "extends": "standard",
+    "env" : {
+      "browser": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      }
+    },
+    "plugins": [
+        "react",
+        "riot",
+        "html" 
+    ],
+    "rules": {
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error"
+    }
+}
